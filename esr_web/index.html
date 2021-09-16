@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle.js</title>
+    <link rel="stylesheet" type='text/css' href="styles.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> -->
+    <!-- font-awesome -->
+   <script src="https://kit.fontawesome.com/90c2a958cf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="tittle">
+        <div id="particles-js" class=grad>
+            <nav class="nav">
+                <div class="container">
+                    <div class="logo">
+                        <a href="#">ESR-ML</a>
+                    </div>
+                    <div id="mainListDiv" class="main_list">
+                        <ul class="navlinks">
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#face">Face Emotion</a></li>
+                            <li><a href="#sign">Sign Language</a></li>
+                            <li><a href="#footer">Support Us</a></li>
+                        </ul>
+                    </div>
+                    <span class="navTrigger">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                </div>
+            </nav>
+            <div class="content">
+                Welcome to the world of Emotion and Sign Language Recogniser
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class=sub-heading>About</h2>
+            <p>Facial recognition systems can be used to identify people in photos, videos, or in real-time. Facial
+                recognition
+                is a category of biometric security.Sign language recognition system is to provide an efficient and
+                accurate
+                system to convert sign language into text so that communication between deaf and normal people can be
+                more
+                convenient.</p>
+        </div>
+    </section>
+    <hr>
+    <section id="face">
+        <div class=sub-heading>EMOTION RECONGITION</h2>
+            <p>A facial recognition system is a technology capable of matching a human face from a digital image or a
+                video frame against a database of faces, typically employed to authenticate users through ID
+                verification services, works by pinpointing and measuring facial features from a given image.</p>
+            <a href="#" class="button">Capture</a>
+        </div>
+    </section>
+    <hr>
+    <section id="sign">
+        <div class=sub-heading>SIGN LANGUAUGE</h2>
+            <p>ign languages are languages that use the visual-manual modality to convey meaning. Sign languages are
+                expressed through manual articulations in combination with non-manual elements. Sign languages are
+                full-fledged natural languages with their own grammar and lexicon.</p>
+            <a href="#" class="button">Capture</a>
+        </div>
+    </section>
+    <hr>
+    <footer id="footer">
+        <i class="footer-img fab fa-facebook fa-3x"></i>
+        <i class="footer-img fab fa-twitter fa-3x"></i>
+        <i class="footer-img fab fa-instagram fa-3x"></i>
+        <i class="footer-img fas fa-envelope fa-3x"></i>
+        <p>© Copyright 2021 IIITDMJ student</p>
+    
+    </footer>
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>
+
+</html>
