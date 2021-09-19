@@ -1,7 +1,9 @@
 {% extends 'base_sign.html'%}{% block content %}
 
-<h1 style="text-align: center;">Sign Language Detection Web App in Flask</h1>
-<div style="justify-content: center; display: flex; margin-top: 30px;"><img src="{{ url_for('video_sign') }}"></div>
+
+<h1 style="text-align: center;z-index: 10;color: white;">Sign Language</h1>
+<p style="text-align: center;z-index: 10;color: red;">Note<span style="color: white;"> :Refresh the page incase the camera freezes!</span></p>
+<div style="justify-content: center; display: flex; margin-top: 30px;position:relative;z-index:10"><img src="{{ url_for('video_sign') }}"></div>
 {% endblock %}
 
 

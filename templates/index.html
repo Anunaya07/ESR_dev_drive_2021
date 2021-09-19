@@ -20,6 +20,8 @@
             font-family: "Quicksand", sans-serif;
             font-size: 62.5%;
             font-size: 10px;
+            background-color: #012841;
+            background: linear-gradient(90deg, #000000, #012841 70%, #000000);
         }
 
         /* ---- particles.js container ---- */
@@ -29,13 +31,11 @@
             width: 100vw;
             height: 100vh;
         }
-
-        .grad {
+ 
+        /*.grad {
             background-color: #000000;
             background-image: linear-gradient(#000000, #012841);
-            /* background-image: linear-gradient(#000428, #004e92); */
-            /* background-image: linear-gradient(#0f1727 , #243b55); */
-        }
+        } */
 
         .content {
             color: #fff;
@@ -47,9 +47,6 @@
             left: 0;
             right: 0;
             top: 6em;
-            /* margin: auto;
-    top:30rem;
-    left:38rem; */
             font-size: 5rem;
             font-family: Georgia, 'Times New Roman', Times, serif;
             line-height: 1.5;
@@ -58,24 +55,34 @@
 
         #about,
         #sign,
-        #face {
-            text-align: center;
-            padding: 7% 15%;
-        }
-
+        #face,
         #footer {
             text-align: center;
             padding: 3% 15%;
+            color: white;
+        }
+
+        .bgclr {
+            background-color: #012841;
         }
 
         .footer-img {
             margin: 2%;
         }
-
+        img{
+            position: relative;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;        }
         .sub-heading {
             font-size: 4rem;
         }
-
+        .link{color:#89f6fc}
+        .linkedin{
+            color:#fff;
+        }
         p {
             width: 70%;
             margin: auto;
@@ -83,8 +90,8 @@
         }
 
         hr {
-            background-color: #fff;
-            width: 45%;
+            background-color: #89f6fc;
+            width: 40%;
             margin: auto;
             border: 0;
             height: 1px;
@@ -92,10 +99,9 @@
         }
 
         .button {
-            background-color: #01223f;
-            /* Green */
-            border: 2px solid #01223f;
-            color: white;
+            background-color: #012841;
+            border: 2px solid #03e9f4;
+            color: #03e9f4;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -105,10 +111,21 @@
         }
 
         .button:hover {
-            background-color: #fff;
-            border: 2px solid #01223f;
-            color: #01223f;
+            background-color: #03e9f4;
+            border: 2px solid #03e9f4;
+            color: #fff;
             font-weight: bold;
+            background: #03e9f4;
+            color: #050801;
+            box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+        }
+
+        .copyright {
+            font-size: small;
         }
 
         /* navbar */
@@ -135,7 +152,7 @@
         }
 
         .nav div.logo a:hover {
-            color: #00E676;
+            color: #89f6fc;
         }
 
         .nav div.main_list {
@@ -167,7 +184,7 @@
         }
 
         .nav div.main_list ul li a:hover {
-            color: #00E676;
+            color: #89f6fc;
         }
 
 
@@ -498,36 +515,47 @@
     </section>
 
     <section id="about">
-        <div class=sub-heading>About</h2>
-            <p>In these modern times(specially the post-pandemic era) Facial emotion recognition systems and sign language recoginer have grown in importance 
-                as the world marches towards digitalization. Emotion recogniser have wide range of application in the field biometric security, criminal investigations
-                and medical examination while sign language can be seen as the great tool to improve communication between normal and differently able individuals bridging 
-                socital gaps and providing equal opportunities for all. So contributing towords this growth of these resouces we have built to two CNN(Convulutional Nueral Network) models for emotion and sign
+        <div class=sub-heading><h3>About</h3>
+            <p>In these modern times(specially the post-pandemic era), <strong>Facial emotion recognition</strong> systems and <strong>sign language recoginer</strong> have grown in importance
+                as the world marches towards digitalization. Emotion recogniser have wide range of application in the
+                field biometric security, criminal investigations
+                and medical examination while sign language can be seen as the great tool to improve communication
+                between normal and differently able individuals bridging
+                socital gaps and providing equal opportunities for all. So contributing towords this growth of these
+                resouces we have built two CNN(Convulutional Nueral Network) models for emotion and sign
                 language using <b>tensorflow</b> and <b>keras</b>.
             </p>
+            <br>
+            <!-- <img src="images/face.jpg"> -->
         </div>
     </section>
     <hr>
     <section id="face">
-        <div class=sub-heading>EMOTION RECONGITION</h2>
-            <p>This CNN(Convulutional Neural Network) for emotion is trained on gray scale images with vadilation accuracy of more than
-                60%. This model this designed to recognise 7 emotions namely <b>Angry,Disgust,Fear,Happy,Neutral,Sad and Surprise.</b>
-                As you can see below there are two channels capture_1 and capture_2: The only difference between the two channels is  that for channel capture_1
-                we have locally trained the model but for channel capture_2 we have use a pre trained model <span><a href="https://github.com/serengil/deepface">DeepFace</a></span> to predict
-                results. Moreover to enchance the overall real time capture experience for the user <b>OpenCV</b> have been employed.
-                </p>
-            <a href="emotion_video_1" class="button">Capture_1</a>
-            <a href="emotion_video_2" class="button">Capture_2</a>
+        <div class=sub-heading><h3>EMOTION RECONGITION</h3>
+            <p>This CNN for emotion is trained on gray scale images with vadilation accuracy of more than
+                60%. This model this designed to recognise 7 emotions namely<br> 
+                 <strong>Angry😡, Disgust😖, Fear😨, Happy😀, Neutral😐, Sad😞 and Surprise😱.</strong>
+                As you can see below there are two channels capture_1 and capture_2: The only difference between the two
+                channels is that for channel capture_1
+                we have locally trained the model but for channel capture_2 we have use a pre trained model <span><a class="link"                href="https://github.com/serengil/deepface">DeepFace</a></span> to predict
+                results. Moreover to enchance the overall real time capture experience for the user <b>OpenCV</b> have
+                been employed.
+            </p>
+            <a href="emotion_video_1" class="button">Capture 1</a>
+            <a href="emotion_video_2" class="button">Capture 2</a>
         </div>
     </section>
     <hr>
     <section id="sign">
-        <div class=sub-heading>SIGN LANGUAUGE</h2>
-            <p>This CNN(Convulutional Neural Network) to recognise sign language is trained on gray scale images with vadilation accuracy about
-                90%. This is an elementary model this designed to recognise all the <b>American Sign Language letters</b>. In addition to recogining the letters
-                it will predict blank that is in case no letter is given the ouput will be blank.Like emotion capture <b>OpenCV</b> has been utilized to convert the 
-                colored images to gray scale images to suit the models requiment and to boost the real time image capture exerience.</p>
-            <a href="sign_video" class="button">Capture</a>
+        <div class=sub-heading><h3>SIGN LANGUAUGE</h3>
+            <p>This CNN to recognise sign language is trained on gray scale images which then preprocessed wtih guassian
+                blur filter by the help of OpenCV. It gives vadilation accuracy about
+                90% on plane background. This is an elementary model this designed to recognise all the <strong>American Sign
+                    Language letters</strong>. In addition to recogining the letters
+                it will predict blank that is in case no letter is given the ouput will be blank. To get good result
+                capture your hand in plain background</p>
+                <a href="sign_video" class="button">Capture</a>
+                <br><br>
         </div>
     </section>
     <hr>
@@ -536,7 +564,7 @@
         <i class="footer-img fab fa-twitter fa-3x"></i>
         <i class="footer-img fab fa-instagram fa-3x"></i>
         <i class="footer-img fas fa-envelope fa-3x"></i>
-        <p>© Copyright 2021 IIITDMJ student</p>
+        <p class="copyright">© Copyright 2021. IIITDMJ (Develop and managed by <a href="https://www.linkedin.com/in/abhinav-singh-29933a1ba/" class="linkedin">Abhinav</a> ,<a href="https://www.linkedin.com/in/aabhas-tejasvi-173523202" class="linkedin">Aabhas</a>,<a href="https://www.linkedin.com/in/anunaya-a-a01b56202/" class="linkedin"> Anunaya</a> and <a href="https://www.linkedin.com/in/gautam-singhal-927235206/" class="linkedin"> Gautam</a>)</p>
 
     </footer>
 
