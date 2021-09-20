@@ -7,7 +7,7 @@ from deepface import DeepFace # import DeepFace
 
 face_classifier = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 classifier =load_model(r'./models/emotion_detection_model.h5') #emotion model loaded
-signModel=load_model(r'./models/sign_lang_recog_train_model3.h5') #sign model loaded
+signModel=load_model(r'./models/sign_lang_recog_train_model5.h5') #sign model loaded
 faceCascade= cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml') #haarcascade used for face recognisation
 
 emotion_labels = ['Angry','Disgust','Fear','Happy','Neutral', 'Sad', 'Surprise'] #emotion list
