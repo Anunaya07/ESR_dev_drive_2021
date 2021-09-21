@@ -50,6 +50,6 @@ def video_sign():
     return Response(gen(Video_Sign()), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__=="__main__":
-    app.run(debug=True, port=1000)
+    app.run(debug=True)
 
 
